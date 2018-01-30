@@ -1,0 +1,8 @@
+*.dcu
+*~*
+*.bak
+* - Copy.*
+*(Copy)*
+*.old
+*.ddp
+/SV/Client/LIB

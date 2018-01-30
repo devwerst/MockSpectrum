@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2017/07/25 16:38:11.000.348,=C:\Users\ewerst.ELRIC-PC\Documents\Embarcadero\Studio\Projects\Unit65.pas</Transaction>
+    <Transaction>2017/11/08 15:05:06.000.577,=C:\Users\ewerst.ELRIC-PC\Documents\Embarcadero\Studio\Projects\Unit75.pas</Transaction>
+    <Transaction>2018/01/30 11:09:55.000.261,=C:\Users\ewerst.ELRIC-PC\Documents\Embarcadero\Studio\Projects\Unit77.pas</Transaction>
+    <Transaction>2018/01/30 11:13:06.000.186,C:\Proj\MockSpectrum\GB\Main\GBMainFm.pas=C:\Users\ewerst.ELRIC-PC\Documents\Embarcadero\Studio\Projects\Unit77.pas</Transaction>
+    <Transaction>2018/01/30 11:13:06.000.186,C:\Proj\MockSpectrum\GB\Main\GBMainFm.dfm=C:\Users\ewerst.ELRIC-PC\Documents\Embarcadero\Studio\Projects\Unit77.dfm</Transaction>
+    <Transaction>2018/01/30 11:13:21.000.309,C:\Proj\MockSpectrum\MockSpectrum.dproj=C:\Users\ewerst.ELRIC-PC\Documents\Embarcadero\Studio\Projects\Project13.dproj</Transaction>
+    <Transaction>2018/01/30 11:32:27.000.131,=C:\Proj\MockSpectrum\DP\Data\DPData.pas</Transaction>
+    <Transaction>2018/01/30 11:32:32.000.904,=C:\Proj\MockSpectrum\DP\Calc\DPProj.pas</Transaction>
+    <Transaction>2018/01/30 11:32:39.000.017,=C:\Proj\MockSpectrum\DP\Main\DPMain.pas</Transaction>
+    <Transaction>2018/01/30 11:32:56.000.923,=C:\Proj\MockSpectrum\GB\Calc\GBProj.pas</Transaction>
+    <Transaction>2018/01/30 11:33:06.000.876,=C:\Proj\MockSpectrum\GB\Data\GBSpectrumSession.pas</Transaction>
+    <Transaction>2018/01/30 11:33:06.000.855,=C:\Proj\MockSpectrum\GB\Data\GBProjection.pas</Transaction>
+    <Transaction>2018/01/30 11:33:06.000.834,=C:\Proj\MockSpectrum\GB\Data\GBData.pas</Transaction>
+    <Transaction>2018/01/30 11:33:22.000.265,=C:\Proj\MockSpectrum\Unit1.pas</Transaction>
+    <Transaction>2018/01/30 11:33:29.000.663,C:\Proj\MockSpectrum\Unit1.pas=C:\Proj\MockSpectrum\DPLink.pas</Transaction>
+    <Transaction>2018/01/30 11:33:40.000.432,C:\Proj\MockSpectrum\DPLink.pas=C:\Proj\MockSpectrum\DP\Main\DPLink.pas</Transaction>
+    <Transaction>2018/01/30 11:33:59.000.165,=C:\Proj\MockSpectrum\Unit1.pas</Transaction>
+    <Transaction>2018/01/30 11:34:29.000.076,C:\Proj\MockSpectrum\Unit1.pas=C:\Proj\MockSpectrum\HV\Data\HVData.pas</Transaction>
+    <Transaction>2018/01/30 11:34:36.000.562,=C:\Proj\MockSpectrum\Unit1.pas</Transaction>
+    <Transaction>2018/01/30 11:34:58.000.789,C:\Proj\MockSpectrum\Unit1.pas=C:\Proj\MockSpectrum\HV\Calc\HVProj.pas</Transaction>
+    <Transaction>2018/01/30 11:35:11.000.275,=C:\Proj\MockSpectrum\Unit1.pas</Transaction>
+    <Transaction>2018/01/30 11:35:27.000.004,C:\Proj\MockSpectrum\Unit1.pas=C:\Proj\MockSpectrum\HV\Main\HVMain.pas</Transaction>
+    <Transaction>2018/01/30 11:35:42.000.847,=C:\Proj\MockSpectrum\Unit1.pas</Transaction>
+    <Transaction>2018/01/30 11:36:06.000.962,C:\Proj\MockSpectrum\Unit1.pas=C:\Proj\MockSpectrum\HV\Main\HVLink.pas</Transaction>
+    <Transaction>2018/01/30 11:40:03.000.931,=C:\Proj\MockSpectrum\Unit1.pas</Transaction>
+    <Transaction>2018/01/30 11:41:37.000.553,C:\Proj\MockSpectrum\Unit1.pas=C:\Proj\MockSpectrum\GB\Data\GBConst.pas</Transaction>
+    <Transaction>2018/01/30 11:55:07.127,=C:\Proj\MockSpectrum\Unit1.pas</Transaction>
+    <Transaction>2018/01/30 11:55:46.131,C:\Proj\MockSpectrum\GB\Data\GBModuleMessage.pas=C:\Proj\MockSpectrum\Unit1.pas</Transaction>
+    <Transaction>2018/01/30 11:56:02.834,C:\Proj\MockSpectrum\GB\Main\GBModuleMessage.pas=C:\Proj\MockSpectrum\GB\Data\GBModuleMessage.pas</Transaction>
+    <Transaction>2018/01/30 12:25:24.417,=C:\Proj\MockSpectrum\Unit1.pas</Transaction>
+    <Transaction>2018/01/30 12:25:50.362,C:\Proj\MockSpectrum\GB\Data\GBModvar.pas=C:\Proj\MockSpectrum\Unit1.pas</Transaction>
+    <Transaction>2018/01/30 12:31:41.839,=C:\Proj\MockSpectrum\Unit1.pas</Transaction>
+    <Transaction>2018/01/30 12:31:52.429,C:\Proj\MockSpectrum\GB\Main\GBUtil.pas=C:\Proj\MockSpectrum\Unit1.pas</Transaction>
+  </Transactions>
+</BorlandProject>
