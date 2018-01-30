@@ -20,7 +20,7 @@ type
 implementation
 
 uses
-  GBConst, GBUtil, DPLink;
+  GBConst, GBUtil;
 
 Constructor TDPProj.Create(proj : byte; GBSession : TGBSession);
 begin
@@ -43,7 +43,9 @@ begin
 
   log('DP Calls HV');
   if assigned(HV) then //same as module active
-    DP.SetTFR(1, HV.GetPrEP);
+    DP.SetTFR(1, HV.GetPrEP)
+  else
+    DP.SetTFR(1, 2.5);
 
   log('finish DPProj calculation');
 end;

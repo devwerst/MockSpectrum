@@ -10,13 +10,16 @@ uses
 implementation
 
 uses
-  DPMain, HVMain;
+ {$ifdef hasHV} HVMain,{$EndIf}
+ {$ifdef hasFP} FPMain,{$EndIf}
+  DPMain;
 
 procedure GBModMessage(modID : byte; msg : TGBModMessage);
 begin
   case modID of
     GB_DP : DPModMessage(msg);
-    GB_HV : HVModMessage(msg);
+    {$ifdef hasHV}GB_HV : HVModMessage(msg);{$EndIf}
+    {$ifdef hasFP}GB_FP : FPModMessage(msg);{$EndIf}
   end;
 end;
 

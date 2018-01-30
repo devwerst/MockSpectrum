@@ -1,0 +1,38 @@
+program MockSpectrum_ALL;
+
+uses
+  Vcl.Forms,
+  GBMainFm in 'GB\Main\GBMainFm.pas' {GBMainForm},
+  DPData in 'DP\Data\DPData.pas',
+  DPProj in 'DP\Calc\DPProj.pas',
+  DPMain in 'DP\Main\DPMain.pas',
+  GBProj in 'GB\Calc\GBProj.pas',
+  GBData in 'GB\Data\GBData.pas',
+  GBProjection in 'GB\Data\GBProjection.pas',
+  GBSpectrumSession in 'GB\Data\GBSpectrumSession.pas',
+  GBConst in 'GB\Data\GBConst.pas',
+  GBModuleMessage in 'GB\Main\GBModuleMessage.pas',
+  GBModvar in 'GB\Data\GBModvar.pas',
+  GBUtil in 'GB\Main\GBUtil.pas',
+  DPInterface in 'GB\Links\DPInterface.pas',
+  GBModuleLink in 'GB\Data\GBModuleLink.pas',
+  DPModuleLink in 'DP\Data\DPModuleLink.pas',
+  HVInterface in 'GB\Links\HVInterface.pas',
+  FPInterface in 'GB\Links\FPInterface.pas',
+  FPProj in 'FP\Calc\FPProj.pas',
+  FPData in 'FP\Data\FPData.pas',
+  FPModuleLink in 'FP\Data\FPModuleLink.pas',
+  FPMain in 'FP\Main\FPMain.pas',
+  HVMain in 'HV\Main\HVMain.pas',
+  HVProj in 'HV\Calc\HVProj.pas',
+  HVData in 'HV\Data\HVData.pas',
+  HVModuleLink in 'HV\Data\HVModuleLink.pas';
+
+{$R *.res}
+
+begin
+  Application.Initialize;
+  Application.MainFormOnTaskbar := True;
+  Application.CreateForm(TGBMainForm, GBMainForm);
+  Application.Run;
+end.

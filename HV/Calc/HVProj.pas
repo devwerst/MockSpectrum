@@ -20,7 +20,7 @@ type
 implementation
 
 uses
-  GBConst, GBUtil, HVLink;
+  GBConst, GBUtil;
 
 Constructor THVProj.Create(proj : byte; GBSession : TGBSession);
 begin

@@ -1,0 +1,72 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{418AD787-7B18-4D1B-A186-56D478F8AA96}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="MockSpectrum.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="MockSpectrum_ALL.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="MockSpectrum_FP.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="MockSpectrum_OnlyDP.dproj">
+            <Dependencies/>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="MockSpectrum">
+        <MSBuild Projects="MockSpectrum.dproj"/>
+    </Target>
+    <Target Name="MockSpectrum:Clean">
+        <MSBuild Projects="MockSpectrum.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="MockSpectrum:Make">
+        <MSBuild Projects="MockSpectrum.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="MockSpectrum_ALL">
+        <MSBuild Projects="MockSpectrum_ALL.dproj"/>
+    </Target>
+    <Target Name="MockSpectrum_ALL:Clean">
+        <MSBuild Projects="MockSpectrum_ALL.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="MockSpectrum_ALL:Make">
+        <MSBuild Projects="MockSpectrum_ALL.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="MockSpectrum_FP">
+        <MSBuild Projects="MockSpectrum_FP.dproj"/>
+    </Target>
+    <Target Name="MockSpectrum_FP:Clean">
+        <MSBuild Projects="MockSpectrum_FP.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="MockSpectrum_FP:Make">
+        <MSBuild Projects="MockSpectrum_FP.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="MockSpectrum_OnlyDP">
+        <MSBuild Projects="MockSpectrum_OnlyDP.dproj"/>
+    </Target>
+    <Target Name="MockSpectrum_OnlyDP:Clean">
+        <MSBuild Projects="MockSpectrum_OnlyDP.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="MockSpectrum_OnlyDP:Make">
+        <MSBuild Projects="MockSpectrum_OnlyDP.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="MockSpectrum;MockSpectrum_ALL;MockSpectrum_FP;MockSpectrum_OnlyDP"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="MockSpectrum:Clean;MockSpectrum_ALL:Clean;MockSpectrum_FP:Clean;MockSpectrum_OnlyDP:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="MockSpectrum:Make;MockSpectrum_ALL:Make;MockSpectrum_FP:Make;MockSpectrum_OnlyDP:Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+</Project>

@@ -42,7 +42,7 @@ var
   msg    : TGBModMessage;
 begin
 
-  modSet := [GB_DP];
+  modSet := [GB_DP, GB_FP, GB_HV];
   MySession.CreateProjection(modSet);
 
   msg.MsgID := GB_NEW;
