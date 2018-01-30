@@ -3,7 +3,7 @@ unit DPProj;
 interface
 
 uses
-  GBSpectrumSession, DPData;
+  GBSpectrumSession, DPData, DPInterface;
 
 type
   TDPProj = Class(TObject)
@@ -11,6 +11,7 @@ type
     proj      : byte;
     GBSession : TGBSession;
     DP        : TDPData;
+    HV        : IDP_HV_Inf;
   public
     Constructor Create(proj : byte; GBSession : TGBSession);
     procedure Calculate;
@@ -25,6 +26,7 @@ Constructor TDPProj.Create(proj : byte; GBSession : TGBSession);
 begin
   log('Creating DPProj');
   DP := GBSession.GetModule(proj, GB_DP) as TDPData;
+  HV := GBSession.GetLink(proj, GB_HV) as IDP_HV_Inf;
   self.Proj := proj;
   self.GBSession := GBSession;
 end;
@@ -40,7 +42,8 @@ begin
   DP.SetLE(1, 60);
 
   log('DP Calls HV');
-  DP.SetTFR(1, DP_GetHVPrEP(proj, GBSession));
+  if assigned(HV) then //same as module active
+    DP.SetTFR(1, HV.GetPrEP);
 
   log('finish DPProj calculation');
 end;

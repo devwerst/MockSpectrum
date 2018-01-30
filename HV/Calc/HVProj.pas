@@ -3,7 +3,7 @@ unit HVProj;
 interface
 
 uses
-  GBSpectrumSession, HVData;
+  GBSpectrumSession, HVData, HVInterface;
 
 type
   THVProj = Class(TObject)
@@ -11,6 +11,7 @@ type
     proj      : byte;
     GBSession : TGBSession;
     HV        : THVData;
+    DP        : IHV_DP_Inf;
   public
     Constructor Create(proj : byte; GBSession : TGBSession);
     procedure Calculate;
@@ -25,6 +26,7 @@ Constructor THVProj.Create(proj : byte; GBSession : TGBSession);
 begin
   log('Creating HVProj');
   HV := GBSession.GetModule(proj, GB_HV) as THVData;
+  DP := GBSession.GetLink(proj, GB_DP) as IHV_DP_Inf;
   self.Proj := proj;
   self.GBSession := GBSession;
 end;
@@ -36,7 +38,7 @@ begin
   log('Start HVProj calculation');
 
   log('HV Calls DP');
-  pop := HV_GetDPPop(proj, GBSession, 0, 1);
+  pop := DP.GetPop(0, 1);
   HV.SetPrEP(pop);
 
   log('finish HVProj calculation');

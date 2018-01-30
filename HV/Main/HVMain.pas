@@ -10,13 +10,14 @@ procedure HVModMessage(msg : TGBModMessage);
 implementation
 
 uses
-  HVProj, HVData, GBSpectrumSession;
+  HVProj, HVData, GBSpectrumSession, HVModuleLink;
 
 procedure HVModMessage(msg : TGBModMessage);
 var
   GBSession : TGBSession;
   HVProject : THVProj;
   HV        : THVData;
+  Link      : THVModuleLink;
 begin
   GBSession := msg.Session as TGBSession;
   case msg.msgID of
@@ -42,6 +43,9 @@ begin
     begin
       HV := THVData.Create;
       GBSession.AppendModule(msg.proj, GB_HV, HV);
+
+      link := THVModuleLink.Create(HV);
+      GBSession.AppendModuleLink(msg.proj, GB_HV, link);
     end;
     GB_EP_Refresh:
     begin

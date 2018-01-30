@@ -10,15 +10,19 @@ uses
   GBData in 'GB\Data\GBData.pas',
   GBProjection in 'GB\Data\GBProjection.pas',
   GBSpectrumSession in 'GB\Data\GBSpectrumSession.pas',
-  DPLink in 'DP\Main\DPLink.pas',
   HVData in 'HV\Data\HVData.pas',
   HVProj in 'HV\Calc\HVProj.pas',
   HVMain in 'HV\Main\HVMain.pas',
-  HVLink in 'HV\Main\HVLink.pas',
   GBConst in 'GB\Data\GBConst.pas',
   GBModuleMessage in 'GB\Main\GBModuleMessage.pas',
   GBModvar in 'GB\Data\GBModvar.pas',
-  GBUtil in 'GB\Main\GBUtil.pas';
+  GBUtil in 'GB\Main\GBUtil.pas',
+  DPInterface in 'GB\Links\DPInterface.pas',
+  HVModuleLink in 'HV\Data\HVModuleLink.pas',
+  GBModuleLink in 'GB\Data\GBModuleLink.pas',
+  DPModuleLink in 'DP\Data\DPModuleLink.pas',
+  HVInterface in 'GB\Links\HVInterface.pas',
+  FPInterface in 'GB\Links\FPInterface.pas';
 
 {$R *.res}
 

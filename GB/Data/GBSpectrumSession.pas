@@ -3,7 +3,7 @@ unit GBSpectrumSession;
 interface
 
 uses
-  Contnrs, GBConst, GBData, GBModvar;
+  Contnrs, GBConst, GBData, GBModvar, GBModuleLink;
 
 type
   TGBSession = Class(Tobject)
@@ -16,9 +16,13 @@ type
     procedure CreateProjection(modSet : GB_TByteSet);
     procedure DestroyProjection(proj:byte);
 
-    function  GetModule(proj, modID : byte):TGBModule;
+    function  GetModuleActive(proj, modID : byte):boolean;
 
+    function  GetModule(proj, modID : byte):TGBModule;
     procedure AppendModule(proj, modID : byte; Module : TGBModule);
+
+    function  GetLink(proj, modID : byte):TGBModuleLink;
+    procedure AppendModuleLink(proj, modID : byte; link : TGBModuleLink);
   End;
 
 implementation
@@ -59,6 +63,11 @@ begin
   //not neccessary to implement
 end;
 
+function  TGBSession.GetModuleActive(proj, modID : byte):boolean;
+begin
+  result :=  (projections.items[proj-1] as TProjection).ModuleActive(modID);
+end;
+
 function  TGBSession.GetModule(proj, modID : byte):TGBModule;
 begin
   result :=  (projections.items[proj-1] as TProjection).GetModule(modID);
@@ -73,6 +82,19 @@ begin
   if projection.ModuleActive(modID) then
     projection.SetModule(modID, module);
   log('Module ' + modIDToStr(modID)+' Appended');
+end;
+
+
+function  TGBSession.GetLink(proj, modID : byte):TGBModuleLink;
+begin
+  result :=  (projections.items[proj-1] as TProjection).GetLink(modID);
+end;
+
+procedure TGBSession.AppendModuleLink(proj, modID : byte; link : TGBModuleLink);
+begin
+  log('Appending module link' + modIDToStr(modID));
+  (projections.items[proj-1] as TProjection).SetLink(modID, link);
+  log('Module link' + modIDToStr(modID)+' Appended');
 end;
 
 

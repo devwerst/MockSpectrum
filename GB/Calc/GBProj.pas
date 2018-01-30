@@ -37,10 +37,11 @@ begin
 
   for proj := firstProj to finalProj do
     for modID := 1 to  GB_Max_Modules do
-    begin
-      msg.proj := proj;
-      GBModMessage(modID, msg);
-    end;
+      if GBSession.GetModuleActive(proj, modID) then
+      begin
+        msg.proj := proj;
+        GBModMessage(modID, msg);
+      end;
 end;
 
 end.

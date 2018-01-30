@@ -10,13 +10,14 @@ procedure DPModMessage(msg : TGBModMessage);
 implementation
 
 uses
-  DPProj, DPData, GBSpectrumSession;
+  DPProj, DPData, DPModuleLink, GBSpectrumSession;
 
 procedure DPModMessage(msg : TGBModMessage);
 var
   GBSession : TGBSession;
   DPProject : TDPProj;
-  DP : TDPData;
+  DP        : TDPData;
+  link      : TDPModuleLink;
 begin
   GBSession := msg.Session as TGBSession;
   case msg.msgID of
@@ -42,6 +43,9 @@ begin
     begin
       DP := TDPData.Create(5);
       GBSession.AppendModule(msg.proj, GB_DP, DP);
+
+      link := TDPModuleLink.Create(DP);
+      GBSession.AppendModuleLink(msg.proj, GB_DP, link);
     end;
     GB_EP_Refresh:
     begin
